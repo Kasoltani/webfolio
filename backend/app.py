@@ -1,11 +1,11 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import DeclarativeBase
+from db_models import db
+from routes import register_routes
 
 class Base(DeclarativeBase):
     pass
-
-db = SQLAlchemy(model_class=Base)
 
 #create app
 app = Flask(__name__)
@@ -15,14 +15,13 @@ app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///project.db"
 
 #initialize the app with extension
 db.init_app(app)
-
-#models
-class User(db.Model):
-    pass
+register_routes(app)
 
 with app.app_context():
     db.create_all
 
-@app.route("/")
-def hello_world():
-    return "<p>Hello, World!</p>"
+#register routes
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
