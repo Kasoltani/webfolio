@@ -25,3 +25,4 @@ appfolio/*.local
 
 #backend
 
+backend/appfoliovenv
