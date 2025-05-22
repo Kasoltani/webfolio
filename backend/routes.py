@@ -1,10 +1,9 @@
-from db_models import db, Project
-import flask
+from flask import Flask
 
-def register_routes():
+def register_routes(app):
     @app.route("/")
     def hello_world():
-        return "<p>Hello, World!</p>"
+        return "<h1>Hello, World!</h1>"
     
     @app.route("/addProj")
     def add_Proj():
