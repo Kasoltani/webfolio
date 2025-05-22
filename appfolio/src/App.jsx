@@ -1,14 +1,17 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
   return (
     <>
-      <h1> hello </h1>
+      <button type="button" onClick={incrButton} className="bg-sky-500 hover:bg-sky-700 rounded h-auto w-auto p-2"> Test </button>
     </>
   );
 }
 
 export default App
+
+
+function incrButton(){
+  
+}
