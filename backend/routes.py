@@ -31,5 +31,5 @@ def register_routes(app):
     @app.route("/getClicks", methods=['GET'])
     def get_clicks():
         data = load_data()
-        return jsonify(data)
+        return jsonify(data["button"]["clicks"])
         
