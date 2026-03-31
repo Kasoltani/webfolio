@@ -1,5 +1,83 @@
 {
-    "button": {
-        "clicks": 107
-    }
+    "profile": {
+        "name": "Your Name",
+        "headline": "Computer Science Major building practical, user-focused software.",
+        "location": "Based in California",
+        "email": "you@example.com",
+        "resumeUrl": "#",
+        "githubUrl": "https://github.com/",
+        "linkedinUrl": "https://www.linkedin.com/",
+        "summary": "I am a computer science student focused on building clean, reliable software across the frontend and backend. I enjoy turning ambiguous ideas into usable products and I am currently looking for opportunities to contribute, learn quickly, and grow as an engineer."
+    },
+    "stats": [
+        {
+            "label": "Focus Areas",
+            "value": "Full Stack, APIs, UI"
+        },
+        {
+            "label": "Current Goal",
+            "value": "Internship / New Grad"
+        },
+        {
+            "label": "Strength",
+            "value": "Fast learner with solid fundamentals"
+        }
+    ],
+    "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "React",
+        "Flask",
+        "SQL",
+        "Git",
+        "Data Structures & Algorithms"
+    ],
+    "projects": [
+        {
+            "title": "Portfolio Web App",
+            "description": "A personal website built with React and Flask to present my background, projects, and contact information in a professional format.",
+            "stack": [
+                "React",
+                "Flask",
+                "Vite",
+                "Tailwind CSS"
+            ],
+            "link": "#"
+        },
+        {
+            "title": "Project Placeholder",
+            "description": "Replace this card with one of your stronger class, personal, or internship projects. Focus on the problem, your contribution, and the outcome.",
+            "stack": [
+                "Python",
+                "SQL",
+                "REST APIs"
+            ],
+            "link": "#"
+        },
+        {
+            "title": "Another Project Placeholder",
+            "description": "Use this space for a project that demonstrates engineering depth, ownership, or a technical challenge you solved.",
+            "stack": [
+                "Java",
+                "Algorithms",
+                "Testing"
+            ],
+            "link": "#"
+        }
+    ],
+    "experience": [
+        {
+            "role": "Computer Science Student",
+            "organization": "University / Program",
+            "period": "Present",
+            "details": "Studying software engineering fundamentals including data structures, algorithms, databases, and web development."
+        },
+        {
+            "role": "Seeking Professional Experience",
+            "organization": "Internships, research, or project teams",
+            "period": "2025 - 2026",
+            "details": "Interested in opportunities where I can contribute to production software, collaborate with experienced engineers, and continue building strong technical judgment."
+        }
+    ]
 }

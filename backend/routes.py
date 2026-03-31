@@ -1,35 +1,23 @@
-from flask import Flask, request, jsonify
+from flask import jsonify
+from pathlib import Path
 import json
 
 def register_routes(app):
-    # path to data
-    data_path = "data.json"
+    data_path = Path(__file__).with_name("data.json")
     
-    # load_data() function: returns python json object of the data json
     def load_data():
-        with open(data_path, 'r') as f:
+        with data_path.open("r", encoding="utf-8") as f:
             data = json.load(f)
         return data
     
-    # save_data() function: save python json object to json data file
-    def save_data(data):
-        with open(data_path, 'w') as f:
-            json.dump(data, f, indent=4)
-
-# -------ROUTES----------
     @app.route("/")
-    def hello_world():
-        return "<h1>Hello, World!</h1>"
-    
-    @app.route("/incrClicks", methods=['POST'])
-    def add_one_to_clicks():
-        data = load_data()
-        data["button"]["clicks"] += 1
-        save_data(data)
-        return jsonify(data)
+    def api_root():
+        return jsonify({
+            "message": "Portfolio API is running.",
+            "portfolioEndpoint": "/api/portfolio"
+        })
 
-    @app.route("/getClicks", methods=['GET'])
-    def get_clicks():
-        data = load_data()
-        return jsonify(data["button"]["clicks"])
+    @app.route("/api/portfolio", methods=["GET"])
+    def get_portfolio():
+        return jsonify(load_data())
         
